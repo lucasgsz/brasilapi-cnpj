@@ -1,0 +1,22 @@
+.ativiEconomica{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.ativiEconomica .boxContent{
+    display: flex;
+    justify-content: space-around;
+}
+.ativiEconomica .boxContent div{
+    padding: 10px 0;
+}
+.ativiEconomica .boxContent .descricaoBox{
+    width: 75%;
+}
+.ativiEconomica .boxContent hr{
+    background-color: black;
+    width: 1px;
+    border: none;
+}

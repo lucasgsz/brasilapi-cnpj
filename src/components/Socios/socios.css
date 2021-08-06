@@ -1,0 +1,19 @@
+.socios{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    /* gap: 20px; */
+    padding: 20px;
+}
+
+.socios .boxContent{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.socios .boxContent hr{
+    background-color: black;
+    width: 1px;
+    border: none;
+}
