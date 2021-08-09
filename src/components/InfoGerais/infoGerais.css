@@ -1,0 +1,15 @@
+.detalhes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 800px;
+    /* font-size: 1.5rem; */
+    gap: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1.3px solid #dee2e6;
+    background-clip: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+}

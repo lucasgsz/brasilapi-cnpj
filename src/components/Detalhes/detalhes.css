@@ -1,9 +1,0 @@
-.detalhes{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 15px;
-    border-radius: 10px;
-    width: 50%;
-    font-size: 1.5rem;
-    gap: 10px;
-}

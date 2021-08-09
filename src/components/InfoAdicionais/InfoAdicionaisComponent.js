@@ -1,52 +1,57 @@
 import './infoAdicionais.css';
 
-const infoAdicionais = ({ cnpj, localidade, nomeFantasia }) => {
-    return <div className="infoAdicionais card">
+const InfoAdicionais = ({ arrayCnpj }) => {
+    return <div className="infoAdicionais">
         <div>
             <h3>Nome empresarial</h3>
-            <span>Nome empresarial</span>
+            <span>{arrayCnpj.razao_social}</span>
         </div>
         <div>
             <h3>Data da Abertura</h3>
-            <span>Data da Abertura</span>
+            <span>{arrayCnpj.data_inicio_atividade}</span>
         </div>
         <div>
             <h3>Número da inscrição</h3>
-            <span>Número da inscrição</span>
+            <span>{arrayCnpj.cnpj + '-' + arrayCnpj.descricao_matriz_filial}</span>
         </div>
         <div>
             <h3>Última atualização</h3>
-            <span>Última atualização</span>
+            {/* <span>{arrayCnpj.}</span> */}
         </div>
         <div>
             <h3>Logradouro</h3>
-            <span>Logradouro</span>
+            <span>{arrayCnpj.logradouro}</span>
         </div>
         <div>
             <h3>Número</h3>
-            <span>Número</span>
+            <span>{arrayCnpj.numero}</span>
         </div>
         <div>
             <h3>CEP</h3>
-            <span>CEP</span>
+            <span>{arrayCnpj.cep}</span>
         </div>
         <div>
             <h3>Bairro</h3>
-            <span>Bairro</span>
+            <span>{arrayCnpj.bairro}</span>
         </div>
         <div>
             <h3>Municipio</h3>
-            <span>Municipio</span>
+            <span>{arrayCnpj.municipio}</span>
+        </div>
+        <div>
+            <h3>UF</h3>
+            <span>{arrayCnpj.uf}</span>
         </div>
         <div>
             <h3>Telefone</h3>
-            <span>Telefone</span>
+            <span>{arrayCnpj.ddd_telefone_1}</span>
+            <span>{arrayCnpj.ddd_telefone_2}</span>
         </div>
         <div>
             <h3>Capital Social</h3>
-            <span>Telefone</span>
+            <span>{arrayCnpj.capital_social}</span>
         </div>
     </div>
 }
 
-export default infoAdicionais;
+export default InfoAdicionais;

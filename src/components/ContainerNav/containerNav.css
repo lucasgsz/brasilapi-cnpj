@@ -1,0 +1,30 @@
+.containerNav{
+    width: 800px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1.3px solid #dee2e6;
+    background-clip: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+}
+.headerNav{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    margin: 15px;
+}
+.headerNav button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-transform: uppercase;
+}
+.headerNav button.ativo{
+    border: solid 1px #dee2e6;
+    border-bottom: none;
+}

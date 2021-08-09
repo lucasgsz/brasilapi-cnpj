@@ -1,20 +1,18 @@
 import React from 'react';
 import './app.css';
-import Detalhes from './Detalhes/DetalhesComponent';
-import InfoAdicionais from './InfoAdicionais/InfoAdicionaisComponent';
-import Socios from './Socios/SociosComponent';
 import loadingSvg from '../loading-screen.svg';
-import AtividadeEconomica from './AtiviEconomica/AtiviEconomica';
+import ContainerNav from './ContainerNav/ContainerNavComponent';
 
 
-function App() {
+const App = () => {
   const [cnpj, setCnpj] = React.useState('');
-  const [arrayCpnj, setArrayCpnj] = React.useState();
+  const [arrayCpnj, setArrayCpnj] = React.useState({});
   const [loading, setLoading] = React.useState(false);
 
   const handleChange = async () => {
     setLoading(true);
-    const response = await fetch('http://127.0.0.1:8000/api/consulta/' + cnpj);
+    // const response = await fetch('http://127.0.0.1:8000/api/consulta/' + cnpj);
+    const response = await fetch('https://brasilapi.com.br/api/cnpj/v1/' + cnpj);
     const json = await response.json();
     setArrayCpnj(json);
     setLoading(false);
@@ -29,17 +27,17 @@ function App() {
           <button onClick={handleChange}>Pesquisar</button>
         </div>
       </div>
+
       {
         loading &&
         <div className="loadingScreen">
           <span>Carregando</span>
-          <img src={loadingSvg} />
+          <img alt="carregando" src={loadingSvg} />
         </div>
       }
-      <Detalhes />
-      <InfoAdicionais />
-      <Socios />
-      <AtividadeEconomica />
+      {arrayCpnj.cnpj &&
+        < ContainerNav arrayCnpj={arrayCpnj} />
+      }
     </div >
   );
 }
