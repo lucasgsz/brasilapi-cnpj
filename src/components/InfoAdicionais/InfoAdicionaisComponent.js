@@ -1,55 +1,56 @@
 import './infoAdicionais.css';
 
-const InfoAdicionais = ({ arrayCnpj }) => {
+const InfoAdicionais = ({ infoGerais, endereco }) => {
     return <div className="infoAdicionais">
         <div>
             <h3>Nome empresarial</h3>
-            <span>{arrayCnpj.razao_social}</span>
+            <span>{infoGerais.razaoSocial}</span>
         </div>
         <div>
             <h3>Data da Abertura</h3>
-            <span>{arrayCnpj.data_inicio_atividade}</span>
+            <span>{infoGerais.inicioAtvd}</span>
         </div>
         <div>
             <h3>Número da inscrição</h3>
-            <span>{arrayCnpj.cnpj + '-' + arrayCnpj.descricao_matriz_filial}</span>
+            <span>{infoGerais.numInscricao}</span>
         </div>
         <div>
             <h3>Última atualização</h3>
-            {/* <span>{arrayCnpj.}</span> */}
+            {/* <span>{infoGerais.}</span> */}
         </div>
         <div>
             <h3>Logradouro</h3>
-            <span>{arrayCnpj.logradouro}</span>
+            <span>{endereco.logradouro}</span>
         </div>
         <div>
             <h3>Número</h3>
-            <span>{arrayCnpj.numero}</span>
+            <span>{endereco.numero}</span>
         </div>
         <div>
             <h3>CEP</h3>
-            <span>{arrayCnpj.cep}</span>
+            <span>{endereco.cep}</span>
         </div>
         <div>
             <h3>Bairro</h3>
-            <span>{arrayCnpj.bairro}</span>
+            <span>{endereco.bairro}</span>
         </div>
         <div>
             <h3>Municipio</h3>
-            <span>{arrayCnpj.municipio}</span>
+            <span>{endereco.municipio}</span>
         </div>
         <div>
             <h3>UF</h3>
-            <span>{arrayCnpj.uf}</span>
+            <span>{endereco.uf}</span>
         </div>
-        <div>
-            <h3>Telefone</h3>
-            <span>{arrayCnpj.ddd_telefone_1}</span>
-            <span>{arrayCnpj.ddd_telefone_2}</span>
-        </div>
+        {/* {endereco.telefone.map((item, index) => {
+            <div>
+                <h3>Telefone {index}</h3>
+                <span>{item.telefone + { index }}</span>
+            </div>
+        })} */}
         <div>
             <h3>Capital Social</h3>
-            <span>{arrayCnpj.capital_social}</span>
+            <span>{infoGerais.capitalSocial}</span>
         </div>
     </div>
 }

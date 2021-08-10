@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BrasilCnpjController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/consulta/{cnpj}', function (Request $request, $cnpj) {
-    // return $request->user();
-    return json_encode($cnpj);
-});
+Route::get('/consulta/{cnpj}', [BrasilCnpjController::class, 'consulta']);

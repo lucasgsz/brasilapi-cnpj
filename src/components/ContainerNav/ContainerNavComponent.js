@@ -18,14 +18,7 @@ const ContainerNav = ({ arrayCnpj }) => {
     }
     return (
         <div>
-            <InfoGerais
-                cnpj={arrayCnpj.cnpj}
-                razaoSocial={arrayCnpj.razao_social}
-                inicioAtividade={arrayCnpj.data_inicio_atividade}
-                municipio={arrayCnpj.municipio}
-                uf={arrayCnpj.uf}
-                descricaoAtividade={arrayCnpj.cnae_fiscal_descricao}
-            />
+            <InfoGerais infoGerais={arrayCnpj.infoGerais}/>
             < div className="containerNav card">
                 <div className="headerNav">
                     <button className="ativo" data-idbox="infoAdicionais" onClick={switchBox}>
@@ -40,13 +33,13 @@ const ContainerNav = ({ arrayCnpj }) => {
                 </div>
                 <div className="bodyNav">
                     {boxActive === 'infoAdicionais' &&
-                        <InfoAdicionais arrayCnpj={arrayCnpj} />
+                        <InfoAdicionais infoGerais={arrayCnpj.infoGerais} endereco={arrayCnpj.endereco} />
                     }
                     {boxActive === 'socios' &&
-                        <Socios arraySocios={arrayCnpj.qsa} />
+                        <Socios socios={arrayCnpj.socios} />
                     }
                     {boxActive === 'atvdEconomica' &&
-                        <AtvdEconomica arrayAtividades={arrayCnpj.cnaes_secundarias} />
+                        <AtvdEconomica atividades={arrayCnpj.atividadesEconomicas} />
                     }
                 </div>
             </div>

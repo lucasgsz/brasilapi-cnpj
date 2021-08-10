@@ -1,8 +1,8 @@
 import './atvdEconomica.css';
 
-const AtvdEconomica = ({ arrayAtividades }) => {
+const AtvdEconomica = ({ atividades }) => {
     return <div className="ativiEconomica">
-        {arrayAtividades.map((atividade, index) => {
+        {atividades.map((atividade, index) => {
             return (
                 <div key={index} className="boxContent">
                     <div>
