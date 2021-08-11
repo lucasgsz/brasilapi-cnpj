@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;
+use App\Http\Resources\BrasilCnpjResource;
 
 class BrasilCnpjController extends Controller
 {
@@ -12,39 +13,10 @@ class BrasilCnpjController extends Controller
 
         if(isset($response->message)){
             $response = array(
-                "status" => 'cpf invalido'
+                "status" => 'error'
             );
         }else{
-
-            $arrayCnpj = array(
-                "infoGerais" => array(
-                    "cnpj" => $response->cnpj,
-                    "razaoSocial" => $response->razao_social,
-                    "descAtividade" => $response->cnae_fiscal_descricao,
-                    "inicioAtvd" => $response->data_inicio_atividade,
-                    "situacaoCadastral" => $response->descricao_situacao_cadastral,
-                    "estadoFundacao" => $response->municipio."/".$response->uf,
-                    "numInscricao" => $response->cnpj."-".$response->descricao_matriz_filial,
-                    "capitalSocial" => $response->capital_social,
-                ),
-                "endereco" => array(
-                    "logradouro" => $response->logradouro,
-                    "bairro" => $response->bairro,
-                    "cep" => $response->cep,
-                    "numero" => $response->numero,
-                    "uf" => $response->uf,
-                    "municipio" => $response->municipio,
-                    "codMunicipio" => $response->codigo_municipio,
-                    "complemento" => $response->complemento,
-                    "telefone" => array(
-                        "telefone1" => $response->ddd_telefone_1,
-                        "telefone2" => $response->ddd_telefone_2
-                    ),
-                ),
-                "socios" => $response->qsa,
-                "atividadesEconomicas" => $response->cnaes_secundarias
-            );
-            
+            $arrayCnpj = new BrasilCnpjResource($response);
             $response = array(
                 "status" => "sucesso",
                 "arrayCnpj" => $arrayCnpj

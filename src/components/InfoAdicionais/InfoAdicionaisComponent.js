@@ -16,7 +16,7 @@ const InfoAdicionais = ({ infoGerais, endereco }) => {
         </div>
         <div>
             <h3>Última atualização</h3>
-            {/* <span>{infoGerais.}</span> */}
+            <span>{infoGerais.ultimaSituacao}</span>
         </div>
         <div>
             <h3>Logradouro</h3>
