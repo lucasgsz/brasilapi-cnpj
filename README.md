@@ -13,8 +13,8 @@ Primeiro, use o `npm install` e depois, `npm start`, esses comandos devem ser re
 
 # Fotos
 
-![Screen 1](https://github.com/lucasgsz/brasilapi-cnpj/blob/master/.github/1.png?raw=true)
-![Screen 2](https://github.com/lucasgsz/brasilapi-cnpj/blob/master/.github/2.png?raw=true)
-![Screen 3](https://github.com/lucasgsz/brasilapi-cnpj/blob/master/.github/3.png?raw=true)
-![Screen 4](https://github.com/lucasgsz/brasilapi-cnpj/blob/master/.github/4.png?raw=true)
+![Screen 1](https://raw.githubusercontent.com/lucasgsz/brasilapi-cnpj/master/.github/1.png)
+![Screen 2](https://raw.githubusercontent.com/lucasgsz/brasilapi-cnpj/master/.github/2.png)
+![Screen 3](https://raw.githubusercontent.com/lucasgsz/brasilapi-cnpj/master/.github/3.png)
+![Screen 4](https://raw.githubusercontent.com/lucasgsz/brasilapi-cnpj/master/.github/4.png)
 
