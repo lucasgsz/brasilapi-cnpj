@@ -42,12 +42,16 @@ const InfoAdicionais = ({ infoGerais, endereco }) => {
             <h3>UF</h3>
             <span>{endereco.uf}</span>
         </div>
-        {/* {endereco.telefone.map((item, index) => {
+        <div>
+            <h3>Telefone</h3>
+            <span>{endereco.telefone.telefone1}</span>
+        </div>
+        {endereco.telefone.telefone2 &&
             <div>
-                <h3>Telefone {index}</h3>
-                <span>{item.telefone + { index }}</span>
+                <h3>Telefone 2</h3>
+                <span>{endereco.telefone.telefone2}</span>
             </div>
-        })} */}
+        }
         <div>
             <h3>Capital Social</h3>
             <span>{infoGerais.capitalSocial}</span>
