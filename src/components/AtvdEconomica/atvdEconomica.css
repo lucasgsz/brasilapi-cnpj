@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 15px 5px;
-
+    overflow: auto;
 }
 
 .ativiEconomica .boxContent{
